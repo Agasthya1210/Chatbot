@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placements - My College</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
+  <div class="container">
+    <!-- College Logo -->
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="College Logo" style="height: 100px;"></a>
+    <!-- Toggler for small screens -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="college.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admission.html">Admissions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="academics.html">Academics</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="placements.html">Placements <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="research.html">Research and Development</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Placements Section -->
+<section id="placements">
+  <div class="container">
+    <h2>Placements</h2>
+    <p>Our college has a strong track record of placements, with many of our graduates securing exciting career opportunities in leading companies.</p>
+    <h3>Placement Statistics</h3>
+    <canvas id="placementChart" width="400" height="200"></canvas>
+    <p>Placement statistics for the past few years:</p>
+    <ul>
+      <li>Year 2021: 99%</li>
+      <li>Year 2022 : 98%</li>
+      <li>Year 2023: 98%</li>
+    </ul>
+    <h3>Top Recruiting Companies</h3>
+    <p>Some of the top companies that have recruited our students:</p>
+    <ul>
+      <li>Google</li>
+      <li>Microsoft</li>
+      <li>Facebook etc</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Placements Chart Script -->
+<script>
+  var ctx = document.getElementById('placementChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['2021', '2022', '2023'],
+          datasets: [{
+              label: 'Placement Percentage',
+              data: [99,98,98],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+</script>
+</body>
+</html>
