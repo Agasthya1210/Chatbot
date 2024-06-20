@@ -24,7 +24,7 @@ value_column_index = 1  # Index of the column containing values
 responses = csv_to_dict(csv_file, key_column_index, value_column_index)
 
 
-print('BOT : Hello I am MGITBOT, your college assistant. What can i help you with today?\n')
+print('BOT : Hello I am EDUBOT, your college assistant. What can i help you with today?\n')
 sample=input(user_templete.format(''))
 time.sleep(0.5)
 print('Before proceeding, Please tell me your name')
